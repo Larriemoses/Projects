@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    
+    width: 100%;
+    height: 100px;
+    background: rgb(7, 22, 63);
+
+    
+}
+
+
+.Links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    
+  }
+
+.navbar a{
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    margin: 20px;
+    font-size: 25px;
+ 
+}
+
+
+@media only screen and (max-width: 550px) {
+    .Links {
+      visibility: hidden;
+    }
+
+  }
+
+  .toggleButton{
+    width: 100%;
+    height: 30px;
+    /* display: contents; */
+    position:fixed;
+    margin-left: 45%;
+    margin-top: 30px;
+    
+
+  }
+
+  @media only screen and (min-width: 550px) {
+    .toggleButton {
+      visibility: hidden;
+    }
+
+  }
+
