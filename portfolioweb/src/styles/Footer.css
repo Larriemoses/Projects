@@ -13,7 +13,7 @@
 
 
 .socialMedia svg{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 70px;
     margin: 20px;
     cursor: pointer;
@@ -22,3 +22,18 @@
 .footer p{
     color: white;
 }
+
+span{
+    color: #e9d35b;
+}
+@media only screen and (max-width: 550px) {
+   
+    .socialMedia svg{
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+        cursor: pointer;
+    }
+    
+  }
+
