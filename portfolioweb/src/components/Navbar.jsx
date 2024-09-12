@@ -19,8 +19,11 @@ function Navbar() {
     return (
         <div className='navbar' id={expandNavbar ? 'open' : 'close'}>
             <div className='toggleButton'>
+                {/*COnditionally render the ReorderIcon*/}
+               {! expandNavbar && (
                 <button onClick={() => {setExpandNavbar ((prev) => !prev)}}> 
                     <ReorderIcon /> </button>
+                )}
             </div>
             <div className='Links'>
                 <Link to='/'> Home </Link>
