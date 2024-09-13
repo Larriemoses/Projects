@@ -10,26 +10,33 @@ export const ProjectList =[
     {
         name: "Software Testing Web",
         image: Pic1,
+        skills: "Git, Github, Reactjs",
     },
     {
         name: "E-Commerce Web",
         image: Pic2,
+        skills: "Git, Github, Reactjs, GraphQL, MongoDB, Python",
+
     },
     {
         name: "Youtube CLone",
         image: Pic3,
+        skills: "Git, Github, Reactjs, GraphQL, MongoDB, Python",
     },
     {
         name: "Data Analysis WebAPP",
         image: Pic4,
+        skills: "Git, Github, Reactjs, GraphQL, MYSQL, Python",
     },
     {
         name: "SendME Project",
         image: Pic5,
+        skills: "Git, Github, Reactjs, GraphQL, MongoDB, Python",
     },
     {
         name: "Web Portfolio",
         image: Pic6,
+        skills: "Git, Github, Reactjs, GraphQL, MongoDB, Python",
     },
 
 
