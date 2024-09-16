@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LmX</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" class="titleicon" href="../assets/img1.jpg" />
+    <script src="/landingPage/scripts/home.js"></script>
+    <link rel="stylesheet" href="/landingPage/styles/home.css">
+</head>
+<body >
+    <!-- <div class="logo" alt="#logo">LmX</div> -->
+    <nav  class="Navbar">
+        <div id="homeSection" class="logo" alt="#logo">LmX</div>
+                   <div id="sections" class="sections ">
+            <div  onclick=" scrollToSection('homeSection')" class="home">HOME</div>
+            <div onclick="scrollToSection('ourServices')"  class="OurServices">OUR SERVICES</div>
+            <div class="AboutUs">ABOUT US</div>
+            <div class="Contact">CONTACT </div>
+       
+      
+        <span  onclick="showMenu()" class="material-icons">menu</span>
+  
+    </nav>
+
+    <div id="Navbar_viewport" class="Navbar_viewport">
+        <span  onclick="closeMenu()" class="material-icons">close</span>
+            <div onclick="showOurServices(), scrollToSection('homeSection')" class="home">HOME</div>
+            <div onclick="showOurServices(), scrollToSection('ourServices')" class="OurServices">OUR SERVICES</div>
+            <div class="AboutUs">ABOUT US</div>
+            <div class="Contact">CONTACT </div>
+       
+    </div>
+    <main class="main" >
+        <div id="" class="Home_Section">
+            <h1>Welcome to <span class="lmx">LmX</span></h1>
+            <p>We Offer the best of Tech Services</p>
+        </div>
+        <div  id="ourServices" >
+           <div class="Our_Services">
+            <h1>Our services</h1>
+           
+            <div class="our_services_options">
+              
+                 <span onclick="showModal1()" class="material-icons">code<a href="#" style="   font-weight: bolder;">Software Engineering <p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a></span>
+                 <div id="overlay">
+                    <div id="modalContent">
+                      <div class="close-btn" onclick="closeModal()">&times;</div>
+                      <!-- iframe to load external content -->
+                      <iframe id="externalContent" ></iframe>
+                    </div>
+                  </div>
+  
+                 <span onclick="showModal2()" class="material-icons"> design_services <a href="#"  style="   font-weight: bolder;">UI/UX Designs <p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a></span>
+                 <span onclick="showModal3()"class="material-icons">insights<a href="#"  style="   font-weight: bolder;">Data Analysis<p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a> </span>
+                 <span onclick="showModal4()"class="material-icons">work_outline<a href="#"  style="   font-weight: bolder;">Product Management<p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a></span>
+                 <span onclick="showModal5()"class="material-icons">edit<a href="#"  style="   font-weight: bolder;">Content Writing<p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a></span>
+                 <span onclick="showModal6()" class="material-icons">language<a href="#"  style="   font-weight: bolder;">Networking<p style="font-size: 0.8rem; font-weight: 200; margin-top: 5%;">Click to know more...</p> </a></span>
+                <!-- <a ></a> -->
+            </div>
+        </div>
+        </div>
+        <div class="About_us">
+            <div>
+                <h1>About Us</h1>
+            </div>
+           <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nemo tenetur, nostrum magnam repellendus labore nobis explicabo omnis vero natus ab excepturi dolorem quod atque quia quidem, maiores temporibus a?</p>
+            <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro magnam minima, cum sed vero minus voluptates. Ea molestias alias eligendi sed tempore culpa nostrum nihil magni sequi accusamus, soluta itaque? consectetur adipisicing elit. Porro nemo tenetur, nostrum magnam repellendus labore nobis explicabo omnis vero natus ab excepturi dolorem quod atque quia quidem, maiores temporibus a?</p>
+           </div>
+        </div>
+        <div class="Contact">
+            <h1>Contact</h1>
+         <div class="address_map">
+            <h3>Our Location </h3>
+            <div class="googleMAP_Api">
+
+            </div>
+         </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div>
+
+        </div>
+        <div class="contact_means">
+            <span>Telephone:</span>
+            <p>+234(0)7079213058</p>
+            <p>+234(0)8073210004</p>
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+            <p>lmx@gmail.com</p>
+        </div>
+        
+        <p>&copy; 2024 <a href="home.html">lmx.com</a></p>
+       
+   
+    </footer>
+    
+</body>
+</html>

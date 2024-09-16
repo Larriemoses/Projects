@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: none;
+    text-decoration: none;   
+}
+
+nav{
+    display: flex;
+    flex-direction: grid;
+  
+    height: 100px;
+  
+    background-color: rgb(7, 29, 29);
+  
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+  
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    padding: 20px;
+    font-family:unset;
+    color: white;
+    font-weight:200;
+    text-align: left;
+}
+
+nav span{
+    /* display: flex; */
+    visibility: hidden;
+  }
+
+.sections{
+   /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    justify-content: right;
+    font-weight:300;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    color: #ffffff;
+    font-size: 1.3em;
+    cursor: pointer;
+    /* font-weight: 700; */
+}
+.sections div{
+    margin-right: 5%;
+}
+
+.sections div:hover{
+    color: rgb(54, 155, 96);
+}
+
+.sections button{
+height: 40px;
+
+width: 40px;
+border-radius: 5px;
+border: none;
+background: white;
+cursor: pointer;
+color: grey;
+/* font-weight: bolder; */
+font-size: 0.9em;
+visibility: hidden;
+}
+
+.sections button:hover{
+   transform: scale(1.20);
+    
+}
+
+.main{
+    /* width: 100%; */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.Home_Section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(16, 43, 43);
+    color: white;
+    justify-items: center;
+}
+
+.Home_Section h1{
+    font-size: 4rem;
+    font-weight: 400;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Home_Section p{
+    font-size: 1.2rem;
+    color: rgb(79, 139, 79);
+}
+
+
+
+
+
+@keyframes okScreen {
+    0% {
+        color: rgb(247, 165, 165);
+    }
+    25% {
+        color: rgb(251, 252, 181);
+    }
+    50% {
+        color: rgb(8, 255, 255);
+    }
+    100% {
+        color: rgb(255, 255, 0);
+    }
+}
+
+
+.lmx {
+    /* color: rgb(206, 19, 19); */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifa, sans-serif;
+    /* font-size: 3em; */
+    animation: infinite;
+    /* animation-name: tScreen; */
+    animation-name: okScreen;
+    animation-duration: 4s;
+}
+
+.logo {
+    /* color: rgb(206, 19, 19); */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifa, sans-serif;
+    /* font-size: 3em; */
+    animation: infinite;
+    /* animation-name: tScreen; */
+    animation-name: okScreen;
+    animation-duration: 4s;
+}
+
+.Our_Services{
+    margin-top: 12%;
+    margin-bottom: 12%;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    /* color: blue; */
+   
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    /* text-decoration: no; */
+    height: 60vh;  
+}
+img{
+    height: 100px;
+    display: grid;
+}
+
+.Our_Services h1{
+    margin-top: -5%;
+    color: rgb(28, 83, 83);
+ margin-bottom: 2%;
+ font-weight: 600;
+ font-size: 3.5rem;   
+}
+
+.our_services_options{
+    display: grid;
+  grid-template-columns: 1fr 1fr ;
+   gap: 150px;
+   grid-row-gap: 60px;
+   
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.our_services_options span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    width: 100%;
+ 
+    padding: 10px;
+    color: rgb(7, 29, 29);
+    /* font-weight: 400; */
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    font-size: 1.2em;
+    background-color: rgba(242, 255, 255, 0.062);
+    box-shadow: 2px 0px 5px 0px rgba(7, 29, 29, 0.37);
+}
+
+span a{
+    color: rgb(4, 95, 95);
+}
+
+
+
+.our_services_options span:hover{
+    transform: scale(1.18);
+    transition: ease-in-out 0.6s;
+}
+
+.our_services_options  .material-icons {
+    font-size: 36px;   /* Change icon size */
+    color:rgb(4, 95, 95);        /* Change icon color */
+}
+
+
+
+
+
+
+
+
+
+
+
+    /* Hidden modal overlay */
+    #overlay {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stays in place */
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: ease-in-out 0.6s;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+      z-index: 1000; /* Ensures the overlay is on top of other elements */
+    }
+
+    /* Modal content styling */
+    #modalContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the modal */
+      background-color: white;
+      padding: 20px;
+      width: 80%;
+      height: 80%;
+      border-radius: 10px;
+      transition: ease-in-out 0.6s;
+    }
+
+    /* Close button styling */
+    .close-btn {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* iframe styling */
+    iframe {
+      width: 100%;
+      height: 90%;
+      transition: ease-in-out 0.6s;
+      border: none;
+    }
+
+    nav .material-icons{
+        font-size: 2rem;
+        position:absolute;
+        font-weight: 300;
+        margin-top: 5%;
+        height: 40px;
+    }
+    
+
+    .Navbar_viewport{
+        position: relative;
+        /* visibility: hidden; */
+        margin: 0;
+        display: none;
+        height: 90vh;
+        /* margin-top: -13%; */
+        width: 100%;
+        color: white;
+        background-color: rgb(7, 29, 29);
+        text-align: center;
+        padding: 10px;
+        font-size: 1.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Navbar_viewport span{
+       /* text-align: right; */
+       margin-left: 80%;
+       /* padding-bottom: -100px; */
+
+       /* line-height: -10px; */
+    
+    
+    }
+
+    .Navbar_viewport .material-icons{
+        cursor: pointer;
+    }
+
+    
+ .Navbar_viewport div{
+    line-height: 150px;
+    /* font-weight: bolder; */
+    cursor: pointer;
+    
+    
+    }
+
+    .Navbar_viewport div:hover{
+
+        background-color: rgba(19, 75, 75, 0.301);
+
+        
+        }
+
+    .Navbar_viewport div:active{
+
+        background-color: rgba(55, 129, 129, 0.301);
+
+        
+        }
+
+
+    @media only screen and (max-width: 850px) {
+        /* CSS rules for devices with a viewport width of 600px or less */
+       .logo{
+        position: absolute;
+        margin-left: -70%;
+        display:flex;
+       }
+
+        .sections{
+        /* position: relative; */
+        display:flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        visibility: hidden;
+        justify-content: center;
+        /* margin-top: 100px; */
+        justify-items: center;
+        background-color: rgb(7, 29, 29);
+        height: 100%;
+        
+       }
+
+       .sections div{
+        background-color: rgb(7, 29, 29);
+        height: 50px;
+        
+     
+        align-self: center;
+        justify-content: center;
+        justify-items: center;
+     
+       }
+
+       .sections div:hover {
+        background-color: rgb(8, 48, 48);
+        color: white;
+      
+     
+       }
+
+
+       
+       .Home_Section{
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        /* margin-bottom: 50%; */
+       }
+
+
+       .Home_Section h1{
+        font-size: 2rem;
+        font-weight: 400;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .Home_Section p{
+        font-size: 1rem;
+        color: rgb(79, 139, 79);
+    }
+    
+
+
+.Our_Services{
+    
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    
+    align-items: center;
+    font-size: 0.8rem;
+    
+}
+
+.Our_Services h1{
+    font-size: 3rem;
+}
+
+
+.our_services_options{
+display: block;
+margin-bottom: 10%;
+padding: 0;
+width:100%;
+   
+      
+}
+
+
+.our_services_options span{
+ margin-bottom: 30px;
+cursor: pointer;
+padding: 0;
+}
+
+.our_services_options a{
+    font-size: 1.3rem;
+    padding: 0;
+
+}
+
+.our_services_options p{
+    font-size: 0.8rem;
+    padding: 0;
+
+}
+
+
+.our_services_options span:hover{
+    transform: scale(1.0);
+    transition: ease-in-out 0.6s;
+    background-color: rgb(226, 247, 226);
+}
+    nav span{
+        /* display: flex;
+        flex-direction: column; */
+        /* float: right; */
+        position: absolute;
+        margin-left: 90%;
+        color: white;
+        
+        visibility: visible;
+        cursor: pointer;
+      }
+
+
+    .Navbar_viewport div{
+       color: white;
+       font-size: 1.2rem;
+       line-height: 100px;
+    }
+    
+    }
