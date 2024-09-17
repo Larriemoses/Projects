@@ -16,13 +16,7 @@ function showMenu() {
     // document.getElementById("externalContent").src = "/landingPage/pages/SoftwareDev.html"; // External page URL
   }
 
-  function showOurServices() {
-  
-    document.getElementById("Navbar_viewport").style.display = "none";
 
-
-
-  }
 
 
 
