@@ -1,17 +1,63 @@
-.App {
+*{
+  text-decoration: none;
+  outline: none;
+   /* Removes bullets (ul) and numbers (ol) */
+  margin: 0;         /* Removes default margin */
+  padding: 0; 
+}
+
+
+hr{
+  height: 2px;
+  color: black;
+    background-color: black ;
+}
+
+
+.navwhole{
+  margin-bottom: 4%;
+}
+
+nav{
+ 
+  list-style: none; 
+   display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7.8vh;
+  
+}
+
+nav ul{
+  display:flex;
+  list-style: none; 
+  gap: 120px;
+  color: black;
+  font-weight: bold;
+  text-align: right;
+  font-size: 1.5rem;
+ 
+}
+
+nav a{
+  color: black;
+}
+
+
+
+
+nav a:hover{
+  color: white;
+  background-color: black;
+  padding: 10px;
+}
+
+.title{
+  color: red;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +70,42 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.HomePage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 10px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.HomePage h4{
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+}
+
+.titlehere{
+ 
+ 
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.HomePage ul{
+  width: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  line-height: 0px;
+}
+
+.HomePage li{
+  line-height: 30px;
+  text-align: justify;
+  font-size: 1.3rem;
 }
