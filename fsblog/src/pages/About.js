@@ -11,16 +11,7 @@ function About() {
       <p>As a software developer and a passionate learner, I’ve found immense joy in coding, especially in areas like ReactJS and front-end development. Through this blog, I hope to provide resources, tutorials, and tips that will be helpful to fellow developers, whether you're just starting or looking to expand your knowledge.</p>
       <p>Beyond coding, I’m also deeply involved in creative endeavors. I love making music, especially gospel, and creating pencil art. This blog is a place where I blend both my technical and creative sides, offering a variety of content that reflects who I am. From discussions about the latest web technologies to sharing personal stories about songwriting and art, I want to make this blog an inspiring and resourceful hub for readers like you.</p>
 
-      <b className='titlehere'>What You Can Expect Here:</b>
-      <ul>
-        <li>Tech & Coding: In-depth articles and tutorials on web development, focusing on front-end frameworks like ReactJS, coding practices, and software engineering tips.</li>
-        <li>Creative Pursuits: Stories behind my music, insights into how I approach songwriting, and artwork that I’m excited to share.</li>
-        <li>Personal Growth & Inspiration: As someone passionate about self-improvement and fulfilling my purpose, I’ll share thoughts and experiences that have helped me grow both personally and professionally.</li>
 
-      </ul>
-      <p>Whether you’re here to learn something new, get inspired, or simply explore different facets of life through my lens, I’m so glad to have you along for the ride. Let’s embark on this journey together, filled with creativity, growth, and meaningful connections.</p>
-      <p>Feel free to comment, share, and engage with the content. Let’s build a community where we can all inspire and support one another!</p>
-      <p>Thank you for being here.</p>
       </div>
   </>
   )

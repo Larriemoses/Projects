@@ -1,0 +1,836 @@
+/* src/assets/styles/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+   
+    overflow: hidden;
+    color: #ffffff;
+  }
+  
+
+  .HeroSection{
+    background-color: rgb(75, 74, 74);
+    background-image: url('./a.png');
+    justify-content: center;
+    align-self: center;
+    background-position: center;
+    height: 70%;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+  
+
+
+  }
+
+  .Sections{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .IntroSection{
+    margin-top: 12%;
+    margin-left: 60px;
+    widtH: 80%;
+    line-height: 60px;
+    font-size: 1.2em;
+  }
+
+  .IntroSection h1{
+    margin-top: -6%;
+  }
+
+  .IntroSection p{
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+.cards{
+width: 100%;
+}
+
+
+.card1:hover{
+ 
+  transform: scale(1.20);
+  transition: transform 0.5s ease;
+}
+
+.card2:hover{
+  transform: scale(1.20);
+  transition: transform 0.5s ease;
+}
+
+  .card1, .card2{
+    
+    width: 50%;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 1.5vw; 
+    height: 32vh;
+    border-radius: 20px;
+    /* align-content: center; */
+  }
+
+  .card1 p{
+
+    padding-right: 40px;
+    margin-bottom: 30px;
+    
+  }
+
+  
+  .card2 p{
+
+    padding-right: 20px;
+    margin-bottom: 30px;
+    
+
+  }
+
+
+  .card1{
+    background-color: #c72424;
+    margin-top: 10%;
+  margin-left:  auto;
+  margin-right: 10%;
+    width: 50%;
+    padding-top: 40px;
+  }
+
+
+  .card1 h1{
+    margin-bottom: 30px;
+    margin-top: 0%;
+    
+  }
+
+  .card2 h1{
+    margin-bottom: 30px;
+
+
+    
+  }
+
+
+
+  .card1 button{
+    background-color: #ffffff;
+    width: 80px;
+    margin-top: 10px;
+    height: 40px;
+font-weight: 700;
+    /* box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.493); */
+    color:#c72424;
+    border-radius: 5px;
+
+  }
+.card2{
+    background-color:white;
+    color: black;
+    margin-left: 12%;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    
+ 
+  }
+
+  hr{
+    border: none;
+  }
+
+
+  .card2 button{
+    background-color: #c72424;
+    width: 80px;
+    margin-top: 10px;
+    height: 40px;
+font-weight: 700;
+border-radius: 5px;
+  }
+
+
+  .main{
+    min-height: 100vh;
+    margin-top: 5%;
+  }
+
+  .About{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 40vh;
+    gap: 30px;
+    
+  }
+
+  .WhySendMe_1{
+   margin-left: 70px;
+   margin-right: 70px;
+     
+    
+  }
+
+  
+  .WhySendMe_1 h1{
+    font-size: 3.5em;
+    font-weight: 900;
+  }
+
+  hr{
+    /* outline: 2px solid #c72424; */
+    background-color: #c72424;
+    height: 2px;
+    width: 110px;
+    margin-top: -2%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+
+
+  
+  .WhySendMe_2{
+    margin-right: 70px;
+    font-size: 1.1em;     
+    line-height: 25px; 
+     
+   }
+
+   .WhySendMe_2 a{
+    color: #c72424;
+    font-weight: 700;
+   }
+
+
+   .Testimonials{
+    color: black;
+    display: flex;
+   
+   
+    min-height: 40vh;
+    
+    justify-content: left;
+  }
+
+   .clientSide{
+    /* padding-left: 70px; */
+    /* margin-right: 70px; */
+    /* align-content: center; */
+    width: 45%; /* Full width of the grid cell */
+     
+   }
+ 
+   .clientSide h2{
+    padding-left: 40px;
+   }
+   .clientSide hr{
+    margin-left: 40px;
+    margin-bottom: 15%;
+   }
+   .clientSide h1{
+   
+    font-size: 2em;
+    font-weight: 900;
+    align-self: left;
+
+   }
+
+   .subTestimonial{
+    display:flex;
+    align-content: center;
+    align-items: center;
+    padding-left: 40%;
+   }
+
+   .subTestimonial svg{
+    align-content: center;
+    align-items: center;
+    align-self: center;
+   }
+
+   .pagenationDots1{
+    margin-right: 20px;
+    margin-left: 30px;
+    align-items: center;
+    align-content: center;
+
+   }
+
+   .testimonyBox{  
+    color: rgb(255, 255, 255);
+  background-color: black;  height: 40vh;
+
+ 
+  width: 50%; /* Full width of the grid cell */
+
+  
+   }
+
+   .mTestimony{
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
+    font-size: 1.8em;
+   }
+
+   
+   
+.freelancer{
+  margin-top: 5%;
+}
+
+
+.beforeFooter{
+  margin-top: 5%;
+  min-height: 40vh;
+}
+
+.LastMain1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  min-height: 20vh;
+  margin-bottom: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.firstPart{
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  align-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.firstPart h1{
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+
+.vertical-hr {
+  width: 3px;             /* Make it thin vertically */
+  height: 100px;  
+  margin-right: 5%;
+  align-self: center;
+  background-color: #c72424; /* Set color if needed */
+  border: none;           /* Remove default border */
+}
+
+
+.endPA{
+  margin-right: 4%;
+  
+}
+
+.endPA p{
+  font-size: 1.5em;
+}
+
+.endPA button{
+  font-size: 1em;
+  background-color: #c72424;
+  width: 110px;
+  font-weight: 500;
+ cursor: pointer;
+ border-radius: 8px;
+}
+
+
+
+.LastMain2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: black;
+  min-height: 20vh;
+  margin-bottom: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.endSecondPart{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15%;
+  margin-right: 10%;
+  
+  align-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+
+.endSecondPart p{
+  font-size: 1.5em;
+}
+
+.endSecondPart button{
+  font-size: 1em;
+  background-color: #c72424;
+  width: 110px;
+  font-weight: 500;
+ cursor: pointer;
+ border-radius: 8px;
+}
+
+
+.secondPart{
+  display: flex;
+  /* position: relative; */
+  margin-right: 10%;
+
+    
+  align-content: center;
+  align-items: center;
+}
+
+.secondPart h1{
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+
+.secondPartHidden{
+  display:none;
+}
+
+.footerSection{
+ 
+  min-height: 50vh;
+  width: 100%;
+
+}
+
+.footer_one{
+  display: flex;
+  min-height: 20vh;
+align-items: center;
+
+gap: 40px;
+  background-color: black;
+  color: white;
+}
+
+.footer_one h1{
+  display: flex;
+font-size: 2em;
+  margin-left: 8%;
+}
+
+button:hover{
+  transform: scale(1.05); /* Slightly increase size */
+  /* background-color: ; */
+}
+
+.footer_one button{
+  font-size: 1em;
+  background-color: #c72424;
+  width: 110px;
+  font-weight: 500;
+ cursor: pointer;
+ border-radius: 8px;
+ margin-left: 15%;
+ margin-right: 5%;
+
+}
+
+.contact{
+  line-height: 10px;
+}
+
+.contact hr{
+  height: 1px;
+}
+
+.contact p{
+ box-sizing: border-box;
+
+
+}
+
+.address{
+  
+  width: 100px;
+  line-height: 10px;
+}
+.footer_one h2{
+  font-size: 2em;
+  /* margin-bottom:; */
+}
+
+  /* Media Query */
+
+  @media (max-width: 1100px) {
+    .Sections{
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+.HeroSection{
+  background-image: none;
+  min-height: 90vh;
+
+  padding-bottom: 20px;
+
+  
+}
+
+.IntroSection{
+  width: 100%;
+
+ 
+  /* padding: 10px; */
+  text-align: center;
+  font-size: 0.6em;
+  margin-left: 0;
+  margin-top: 15%;
+}
+.IntroSection h1{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0;
+  font-size: 2.5em;
+  line-height: 30px;
+  overflow: hidden;
+
+}
+
+
+.IntroSection p{
+  font-size: 1.6em;
+  font-weight: 500;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap; /* This ensures the boxes wrap to the next line when the screen gets smaller */
+  justify-content: space-between;
+  width: 100%;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+
+}
+
+.card1, .card2{
+  flex: 1 1 60%; /* Adjusts the width of each box to be around 30% */
+  min-width: 200px; /* Minimum width before wrapping */
+  margin: 20px;
+  width: 40%;
+  border-radius: 0;
+ height: 60%;
+  font-size: 0.7em;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+justify-content: center;
+
+}
+
+.card1 h1{
+  margin-bottom: 50px;
+  
+  /* margin-top:  */
+}
+
+.cards p {
+  padding: 0;
+  text-align: center;
+}
+
+.cards button{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
+
+
+
+.WhySendMe_1{
+  margin-left: 5%;
+
+}
+
+.WhySendMe_2{
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+
+
+
+.footer_one h1{
+  /* margin-bottom: 1%; */
+  margin-left: 5%;
+  margin-right: 0;
+
+
+}
+
+.footer_one button{
+  /* margin-bottom: 1%; */
+  margin-left: 10%;
+  margin-right: 3%;
+
+
+}
+
+.footer_one{
+  display: grid;
+ grid-template-rows: 0.5fr 0.5fr 0.5fr;
+  font-size: 0.85em;
+  /* gap: -10px; */
+  margin: 0;
+  padding: 0;
+  /* align-items: center; */
+  justify-content: center;
+  min-height: fit-content;
+  width: 100%;
+justify-items: center;
+padding-bottom: 5px;
+
+
+}
+
+
+.contact{
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.contact hr{
+  justify-self: center;
+}
+
+.footer_one h1{
+  /* margin-bottom: 1%; */
+  margin-left: 0;
+  margin-right: 0;
+
+
+}
+
+.footer_one button{
+  /* margin-bottom: 1%; */
+  margin-left: 0;
+  margin-right: 0;
+
+
+}
+
+  }
+
+
+  @media (max-width: 900px) {
+
+  .About{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr 1fr; */
+  }
+
+  .Testimonials{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+ 
+ 
+  
+}
+
+.clientSide{
+  margin-left: 5%;
+  margin-right: 1px;
+  width: 100%;
+}
+.subTestimonial{
+   
+margin-left: 4%;
+/* margin-right: 20%; */
+padding: 0;
+width: 80%;
+display: flex;
+
+ }
+
+ .subTestimonial h1{
+
+  font-size: 2.5em;
+  /* width: 100%; */
+ }
+
+
+
+ .subTestimonial svg{
+  size: 40px;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+ }
+
+ .pagenationDots1{
+  margin-right: 10px;
+  margin-left: 20px;
+  align-items: center;
+  align-content: center;
+
+ }
+
+ .testimonyBox{  
+  color: rgb(255, 255, 255);
+background-color: black;  height: 40vh;
+width: 80%;
+margin-right: 0;
+
+}
+
+.mTestimony{
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: 1.7em;
+ }
+
+
+
+
+  .LastMain1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+  
+  
+  }
+  
+  .firstPart{
+  
+    margin-left: 1%;
+    margin-right: 5%;
+    width: 100%;
+    font-size: 1.2em;
+   align-content: left;
+    gap: 2px;
+  }
+
+  .endPA{
+  
+    margin-left: 8%;
+    margin-right: 4%;
+    justify-content: left;
+    justify-items: left;
+  
+
+  margin-top: 4%;
+    /* text-align: left; */
+  }
+
+  .endPA button{
+    justify-self: left;
+  }
+  
+
+
+
+   .LastMain2{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+  
+  
+  }
+
+
+  .endSecondPart{
+  
+    margin-left: 8%;
+    margin-right: 1%;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .secondPart{
+    display: none;
+  }
+
+.secondPartHidden{
+  display: flex;
+  margin-left: 1%;
+  margin-right: 4%;
+  font-size: 1.3em;
+  margin-top: 4%;
+}
+
+.secondPartHidden hr{
+  margin-right: 7%;
+}
+
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 700px) {
+.mTestimony{
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 1.4em;
+ }
+
+ .cards{
+  
+ font-size: 1.2em;
+  
+}
+
+.footer_one{
+ 
+  min-height: 40vh;
+
+
+
+}
+
+
+ 
+}
