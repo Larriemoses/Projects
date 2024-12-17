@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        // Add your custom "babybear" breakpoint
+        babybear: '480px', // Example: Targets screens 480px wide or smaller
+      },
+    },
   },
   plugins: [],
 }

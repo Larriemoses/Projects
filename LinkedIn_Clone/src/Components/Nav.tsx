@@ -10,12 +10,12 @@ import SmLogo from '../assets/sm_logo.png'
 
 
 
-function Nav() {
+function Nav() { 
   return (
     
     <nav className=" text-gray-500 mb-4 font-thin w-full items-center justify-center">
 
-        <div className="flex-row max-w-screen-xl mx-auto md:flex content-center items-center justify-between w-[90%]">
+        <div className="flex-row max-w-screen-xl mx-auto md:flex lg:flex content-center items-center justify-between w-[90%]">
          
          {/*Responsive Screen*/}
             <div id='left_section' className='mt-2 flex ml-2 items-center content-center'> 
@@ -30,10 +30,10 @@ function Nav() {
 
             </div>
            
-            <div id="before_list" className=" mx-auto  md:flex md:flex-auto justify-items-end md:items-center md:content-center md:space-x-2 mt-3 ">
+            <div id="before_list" className=" mx-auto  md:flex md:flex-auto lg:flex-auto lg:mx-auto blue-500 justify-items-end md:items-center md:content-center md:space-x-2 mt-3 ">
 
 
-              <ul className="flex  mx-auto md:flex items-center justify-between md:text-xs md:space-x-6  sm:text-black ">
+              <ul className="flex  mx-auto md:flex items-center justify-between md:text-xs md:space-x-5 lg:justify-end sm:text-black ">
                 
                 
                 <li className=" text-xs justify-center hover:black items-center group-hover:text-black  justify-items-center content-center group">
@@ -91,7 +91,7 @@ function Nav() {
                   <hr className='h-10 border-l-2 border-gray-300' />
                 </li>              
                 
-                </ul>
+                </ul> 
 
                 <div id="join_" className=' hidden sm:hidden md:block items-center justify-end space-x-2 text-sm -mr-0'>
                     {/* <a href="#" className='ml-5 font-semibold text-black'>Join now</a> */}
@@ -103,7 +103,6 @@ function Nav() {
         </div>
        
     </nav>
-
  
   )
 }
