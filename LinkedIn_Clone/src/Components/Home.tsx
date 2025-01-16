@@ -6,22 +6,41 @@ import { FaCaretUp } from "react-icons/fa";
 import Image_01 from "../assets/image_01.svg";
 
 import { arrayOne, arrayTwo } from "./data/buttonsArray";
+import { slides } from "./data/SlideSection";
+
+export interface Slide {
+  slide: string;
+}
 
 const Home: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // Initial set of buttons
-
-  // Handler function for the toggle button
   const toggleShowAll = () => {
     setShowAll((prevShowAll) => !prevShowAll);
   };
 
+  const [nextSlide, setNextSlide] = useState<number>(slides[0].id);
+
+  const handleNext = () => {
+    const currentIndex = slides.findIndex((slide) => slide.id === nextSlide);
+    const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    setNextSlide(slides[nextIndex].id);
+  };
+
+  const handlePrevious = () => {
+    const currentIndex = slides.findIndex((slide) => slide.id === nextSlide);
+    const previousIndex =
+      currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    setNextSlide(slides[previousIndex].id);
+  };
+
+  const currentItem = slides.find((slide) => slide.id === nextSlide);
+
   return (
     <main className="w-full justify-center justify-items-center pt-6">
-      <section className="flex-wrap justify-center justify-items-center md:flex  md:flex-row w-[80%]  ">
+      <section className="flex-wrap w-[100%] text-center justify-center justify-items-center md:flex  md:flex-row md:w-[80%]  ">
         <div className=" flex-1 justify-center justify-items-center md:justify-center text-center md:justify-items-start w-full">
-          <h1 className="flex text-center -top-3 text-3xl md:text-start md:top-0 text-gray-500 md:text-[3em] leading-tight mb-3 ">
+          <h1 className="flex text-center justify-center -top-3 text-3xl md:text-start md:top-0 text-gray-500 md:text-[3em] leading-tight mb-3 ">
             Welcome to your professional community
           </h1>
 
@@ -201,21 +220,21 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <div className="w-full bg-red-50 min-h-[30vh] p-10 justify-center items-center content-center justify-items-center">
+      <section className="w-full bg-red-50 min-h-[30vh] md:min-h-[40vh] p-2 md:p-10 justify-center items-center content-center mb-7 justify-items-center">
         <h1 className="text-2xl md:text-3xl text-red-600 mb-6 text-center ">
           Post your job for millions of people to see
         </h1>
         <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-blue-200   border-2 border-blue-600 text-gray-600  mb-1 rounded-3xl ">
-          <a href="#Join_now" className="text-blue-600 font-semibold">
+          <a href="#Join_now" className="text-blue-600 font-semibold ">
             Post a job
           </a>
         </button>
-      </div>
+      </section>
 
-      <div className="w-full h-min-fit justify-center justify-items-center py-6 items-center content-center">
-        <div className=" w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center items-center md:flex md:flex-row">
+      <section className="w-full h-min-fit justify-center justify-items-center py-6 content-center mb-10">
+        <div className=" w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center  md:flex md:flex-row">
           <div className="flex-1">
-            <h1 className="text-black text-2xl md:text-3xl mb-1 w-[100%] md:w-[90%]">
+            <h1 className="text-black text-2xl md:text-3xl mb-1 w-[100%] md:w-[70%]">
               Discover the best software tools
             </h1>
             <p className="w-[100%] text-xl md:w-[80%]">
@@ -223,31 +242,109 @@ const Home: React.FC = () => {
               best products for you.
             </p>
           </div>
+
           <div className="flex-1">
             <div className="flex flex-wrap gap-2 mb-6">
               <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black  mb-1  rounded-3xl ">
-                IT Services
-              </button>
-
-              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200 border-2 text-black border-black mb-1  rounded-3xl ">
-                Sustainability
+                E-Commerce Platforms
               </button>
 
               <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl ">
-                Business Administration
+                CRM Software
               </button>
 
               <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black  mb-1  rounded-3xl ">
-                Telecommunication
+                Human Resources Management System
               </button>
 
               <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
-                HR Management
+                Recruiting Software
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Sales Intelligence Services
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Project Management Software
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Help Desk Software
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Social Networking Software
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Desktop Publishing Software
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-blue-200   border-2 border-blue-600 text-gray-600  mb-1 rounded-3xl ">
+                <a href="#Join_now" className="text-blue-600 font-semibold">
+                  Show all
+                </a>
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="w-full justify-center justify-items-center p-6 items-center content-center">
+        <div className=" w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center items-center md:flex md:flex-row">
+          <div className="flex-1 mb-7">
+            <h1 className="text-black text-2xl md:text-3xl mb-1 w-[100%] md:w-[80%]">
+              Keep your mind sharp with games
+            </h1>
+            <p className="w-[100%] text-xl md:w-[90%]">
+              Take a break and reconnect with your network through quick daily
+              games.
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-wrap gap-2 mb-6">
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Pinpoint
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Queens
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Crosslimb
+              </button>
+
+              <button className="  justify-center flex w-max items-center px-4 py-2  hover:bg-gray-200  border-2 text-black border-black mb-1  rounded-3xl">
+                Tango
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full h-60-vh bg-pink-100 justify-center justify-items-center p-6 items-center content-center">
+        <div className="w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center items-center md:flex ">
+          <div className="flex-1 flex ">
+            <div className="flex">
+              <button onClick={handleNext}>Next</button>
+            </div>
+            <div className="">
+              <h2>{currentItem?.title}</h2>
+              <p>{currentItem?.description}</p>
+            </div>
+          </div>
+          <div className="flex-1 flex ">
+            <div className="flex">
+              <img src={currentItem?.src} alt={currentItem?.alt} />
+            </div>
+            <div className="flex">
+              <button onClick={handlePrevious}>Previous</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

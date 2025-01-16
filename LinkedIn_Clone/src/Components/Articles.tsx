@@ -1,17 +1,40 @@
 import React, { useState } from "react";
-import { arrayOne, arrayTwo } from "./data/buttonsArray";
+import { slides } from "./data/SlideSection";
 
-function ButtonSection() {
-  const [showAll, setShowAll] = useState(false);
+const Articles = () => {
+  const [nextSlide, setNextSlide] = useState<number>(slides[0].id);
 
-  // Initial set of buttons
-
-  // Handler function for the toggle button
-  const toggleShowAll = () => {
-    setShowAll((prevShowAll) => !prevShowAll);
+  const handleNext = () => {
+    const currentIndex = slides.findIndex((slide) => slide.id === nextSlide);
+    const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    setNextSlide(slides[nextIndex].id);
   };
 
-  return <h1>Articles</h1>;
-}
+  const handlePrevious = () => {
+    const currentIndex = slides.findIndex((slide) => slide.id === nextSlide);
+    const previousIndex =
+      currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    setNextSlide(slides[previousIndex].id);
+  };
 
-export default ButtonSection;
+  const currentItem = slides.find((slide) => slide.id === nextSlide);
+
+  return (
+    <main>
+      <div>
+        <h1>Items List</h1>
+        <ul>
+          <li>
+            <h2>{currentItem?.title}</h2>
+            <p>{currentItem?.description}</p>
+            <img src={currentItem?.src} alt={currentItem?.alt} />
+          </li>
+        </ul>
+      </div>
+      <button onClick={handlePrevious}>Previous</button>
+      <button onClick={handleNext}>Next</button>
+    </main>
+  );
+};
+
+export default Articles;
