@@ -5,6 +5,8 @@ import { FaCaretUp } from "react-icons/fa";
 import { FaCaretLeft } from "react-icons/fa";
 import { FaCaretRight } from "react-icons/fa";
 
+// import { FaArrowAltCircleLeft } from "react-icons/fa";
+
 import Image_01 from "../assets/image_01.svg";
 
 import { arrayOne, arrayTwo } from "./data/buttonsArray";
@@ -351,7 +353,7 @@ const Home: React.FC = () => {
             <div className="flex items-center ">
               <FaCaretLeft
                 onClick={handlePrevious}
-                className="inline-block text-[45px] items-center center"
+                className="text-5xl p-1 justify-center ml-5  items-center text-center text-white bg-gray-600 hover:bg-black rounded-full"
               />
             </div>
           </div>
