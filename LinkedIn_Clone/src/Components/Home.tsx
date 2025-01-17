@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // import SmLogo from '../assets/sm_logo.png'
 import { FaCaretDown } from "react-icons/fa";
 import { FaCaretUp } from "react-icons/fa";
+import { FaCaretLeft } from "react-icons/fa";
+import { FaCaretRight } from "react-icons/fa";
 
 import Image_01 from "../assets/image_01.svg";
 
@@ -24,6 +26,7 @@ const Home: React.FC = () => {
   const handleNext = () => {
     const currentIndex = slides.findIndex((slide) => slide.id === nextSlide);
     const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+
     setNextSlide(slides[nextIndex].id);
   };
 
@@ -38,7 +41,7 @@ const Home: React.FC = () => {
 
   return (
     <main className="w-full justify-center justify-items-center pt-6">
-      <section className="flex-wrap w-[100%] text-center justify-center justify-items-center md:flex  md:flex-row md:w-[80%]  ">
+      <section className="flex-wrap w-[90%] text-center justify-center justify-items-center md:flex  md:flex-row md:w-[80%]  ">
         <div className=" flex-1 justify-center justify-items-center md:justify-center text-center md:justify-items-start w-full">
           <h1 className="flex text-center justify-center -top-3 text-3xl md:text-start md:top-0 text-gray-500 md:text-[3em] leading-tight mb-3 ">
             Welcome to your professional community
@@ -327,20 +330,29 @@ const Home: React.FC = () => {
       <section className="w-full h-60-vh bg-pink-100 justify-center justify-items-center p-6 items-center content-center">
         <div className="w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center items-center md:flex ">
           <div className="flex-1 flex ">
-            <div className="flex">
-              <button onClick={handleNext}>Next</button>
+            <div className="flex items-center ">
+              {/* <button onClick={handleNext}>Ne</button> */}
+              <FaCaretRight
+                onClick={handleNext}
+                className="inline-block items-center text-[45px]"
+              />
             </div>
-            <div className="">
-              <h2>{currentItem?.title}</h2>
-              <p>{currentItem?.description}</p>
+            <div className=" h-full w-4/5">
+              <h2 className="text-red-500 text-xl md:text-3xl mb-5">
+                {currentItem?.title}
+              </h2>
+              <p className="text-xl">{currentItem?.description}</p>
             </div>
           </div>
           <div className="flex-1 flex ">
             <div className="flex">
               <img src={currentItem?.src} alt={currentItem?.alt} />
             </div>
-            <div className="flex">
-              <button onClick={handlePrevious}>Previous</button>
+            <div className="flex items-center ">
+              <FaCaretLeft
+                onClick={handlePrevious}
+                className="inline-block text-[45px] items-center center"
+              />
             </div>
           </div>
         </div>
