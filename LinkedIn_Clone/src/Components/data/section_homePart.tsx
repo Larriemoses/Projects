@@ -66,14 +66,22 @@ const Carousel = <T,>({ slides, renderSlides }: CarouselProps<T>) => {
 
 const App: React.FC = () => {
   return (
-    <div className="flex justify-center items-center  bg-gray-100">
+    <div className="flex justify-center justify-items-center min-h-fit p-5 md:h-[50vh] content-center items-center  bg-gray-200">
       <Carousel
         slides={slides}
         renderSlides={(slide, index) => (
-          <div className="w-[95%] flex-row md:flex-row-reverse  justify-center items-center  text-black text-xl rounded-lg shadow-lg mx-1">
-            <h2 className="w-[95%]">{slide.title}</h2>
-            <p>{slide.description}</p>
-            <img src={slide.src} alt={slide.alt} className="h-[20em]" />
+          <div className="flex flex-col-reverse md:flex-row mx-6 justify-items-center content-center justify-start items-center w-[80vw]">
+            <div className="-left-7 md:w-[80%]">
+              <h2 className="w-[90%] text-2xl md:text-3xl font-normal text-red-500 mb-4">
+                {slide.title}
+              </h2>
+              <p className="w-[90%] md:w-3/5">{slide.description}</p>
+            </div>
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="h-[17em] md:h-[20em] lg:h-[30em] mb-5"
+            />
           </div>
         )}
       />
