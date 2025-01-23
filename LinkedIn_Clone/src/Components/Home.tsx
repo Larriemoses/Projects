@@ -2,15 +2,12 @@ import React, { useState } from "react";
 // import SmLogo from '../assets/sm_logo.png'
 import { FaCaretDown } from "react-icons/fa";
 import { FaCaretUp } from "react-icons/fa";
-import { FaCaretLeft } from "react-icons/fa";
-import { FaCaretRight } from "react-icons/fa";
-
-// import { FaArrowAltCircleLeft } from "react-icons/fa";
 
 import Image_01 from "../assets/image_01.svg";
 
 import { arrayOne, arrayTwo } from "./data/buttonsArray";
 import { slides } from "./data/SlideSection";
+import Part from "./data/section_homePart";
 
 export interface Slide {
   slide: string;
@@ -38,8 +35,6 @@ const Home: React.FC = () => {
       currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
     setNextSlide(slides[previousIndex].id);
   };
-
-  const currentItem = slides.find((slide) => slide.id === nextSlide);
 
   return (
     <main className="w-full justify-center justify-items-center pt-6">
@@ -328,36 +323,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Sliding section */}
 
-      <section className="w-full h-60-vh bg-pink-100 justify-center justify-items-center p-6 items-center content-center">
-        <div className="w-[90%] md:w-[80%] flex-wrap justify-center justify-items-center items-center md:flex ">
-          <div className="flex-1 flex ">
-            <div className="flex items-center ">
-              {/* <button onClick={handleNext}>Ne</button> */}
-              <FaCaretRight
-                onClick={handleNext}
-                className="inline-block items-center text-[45px]"
-              />
-            </div>
-            <div className=" h-full w-4/5">
-              <h2 className="text-red-500 text-xl md:text-3xl mb-5">
-                {currentItem?.title}
-              </h2>
-              <p className="text-xl">{currentItem?.description}</p>
-            </div>
-          </div>
-          <div className="flex-1 flex ">
-            <div className="flex">
-              <img src={currentItem?.src} alt={currentItem?.alt} />
-            </div>
-            <div className="flex items-center ">
-              <FaCaretLeft
-                onClick={handlePrevious}
-                className="text-5xl p-1 justify-center ml-5  items-center text-center text-white bg-gray-600 hover:bg-black rounded-full"
-              />
-            </div>
-          </div>
-        </div>
+      <section className="w-full h-[60vh]">
+        <Part />
       </section>
     </main>
   );
