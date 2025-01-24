@@ -5,6 +5,9 @@ import { FaCaretUp } from "react-icons/fa";
 
 import Image_01 from "../assets/image_01.svg";
 
+import Image_02 from "../assets/section_01.svg";
+import Image_03 from "../assets/section_02.svg";
+
 import { arrayOne, arrayTwo } from "./data/buttonsArray";
 import { slides } from "./data/SlideSection";
 import Part from "./data/section_homePart";
@@ -325,8 +328,26 @@ const Home: React.FC = () => {
       </section>
       {/* Sliding section */}
 
-      <section className="w-full h-[60vh]">
+      <section className="w-full min-h-[60vh]  bg-gray-200">
         <Part />
+      </section>
+
+      <section className="w-full min-h-[60vh] flex flex-wrap text-center px-20 my-4 justify-center items-center justify-items-center">
+        <div className="flex-col justify-items-start md:flex-1 w-[90%] md:w-[80%]">
+          <img src={Image_02} alt="" className="flex" />
+
+          <h1 className="text-3xl text-black text-start">
+            Connect with people who can help
+          </h1>
+          <button className="rounded-full py-2 px-3 hover:bg-slate-300 border-neutral-500 border-2">
+            Find people you know
+          </button>
+        </div>
+        <div className="flex-col  md:flex-1 md:grid justify-center items-center">
+          <img src={Image_03} alt="" />
+          <h1 className="text-2xl text-red-500">learn</h1>
+          <p></p>
+        </div>
       </section>
     </main>
   );

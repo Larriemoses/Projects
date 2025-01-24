@@ -26,7 +26,7 @@ function Nav() {
 
           <div
             id="join_"
-            className="block md:hidden content-center mx-auto items-center justify-center text-sm space-x-2 mr-0"
+            className="block md:hidden content-end mx-auto items-center  justify-center text-sm space-x-2 mr-0"
           >
             <button
               id="sign_in "
@@ -46,7 +46,7 @@ function Nav() {
 
         <div
           id="before_list"
-          className=" mx-auto  md:justify-end md:justify-items-end md:flex blue-500  md:items-center md:content-center md:space-x-2 mt-3 "
+          className=" mx-auto  md:justify-end md:justify-items-end md:flex blue-500   md:items-center md:content-center md:space-x-2 mt-3 "
         >
           <ul className="flex  w-full mx-auto justify-between md:text-xl-4 list-none ml-0 pl-0 md:space-x-8 text-right sm:text-black ">
             <li className=" text-sm justify-center hover:black items-center group-hover:text-black  justify-items-center content-center group">

@@ -80,7 +80,7 @@ const App: React.FC = () => {
             <img
               src={slide.src}
               alt={slide.alt}
-              className="h-[17em] md:h-[20em] lg:h-[30em] mb-5"
+              className="h-[17em] md:h-[20em] lg:h-[25em] mb-5"
             />
           </div>
         )}
