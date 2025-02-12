@@ -37,7 +37,7 @@ const Carousel = <T,>({ slides, renderSlides }: CarouselProps<T>) => {
           <div
             key={index}
             className="md:flex-shrink-0 w-full sm:w-[95%] grid-rows-2 md:w-full" // Each item takes 95% of the width
-          >
+          >.
             {renderSlides(slide, index)}
           </div>
         ))}

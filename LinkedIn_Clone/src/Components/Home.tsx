@@ -332,21 +332,21 @@ const Home: React.FC = () => {
         <Part />
       </section>
 
-      <section className="w-full min-h-[60vh] flex flex-wrap text-center px-20 my-4 justify-center items-center justify-items-center">
-        <div className="flex-col justify-items-start md:flex-1 w-[90%] md:w-[80%]">
-          <img src={Image_02} alt="" className="flex" />
+      <section className="w-full min-h-[70vh] flex flex-wrap text-center px-20 my-4 justify-start items-center justify-items-start">
+        <div className="flex-col justify-items-start md:flex-1 w-[90%] md:w-[60%]">
+          <img src={Image_02} alt="" className="flex mb-5" />
 
-          <h1 className="text-3xl text-black text-start">
+          <h1 className="text-3xl text-black text-start w-4/5 mb-5">
             Connect with people who can help
           </h1>
-          <button className="rounded-full py-2 px-3 hover:bg-slate-300 border-neutral-500 border-2">
+          <button className="rounded-full py-2 px-4 hover:bg-slate-300 border-neutral-500 border-2">
             Find people you know
           </button>
         </div>
         <div className="flex-col  md:flex-1 md:grid justify-center items-center">
-          <img src={Image_03} alt="" />
-          <h1 className="text-2xl text-red-500">learn</h1>
-          <p></p>
+          <img src={Image_03} alt="" className="mb-5" />
+          <h1 className="text-3xl text-black text-start w-4/5 mb-5">Learn the skills you need to succeed</h1>
+          se
         </div>
       </section>
     </main>
