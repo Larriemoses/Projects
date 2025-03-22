@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaMedium } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import image01 from "../assets/Shape (1).png";
+import image01 from "../assets/New Project (1).png";
 
 function Home() {
   return (
@@ -26,7 +26,7 @@ function Home() {
             </li>
             {/* <li className='mr-2  hover:text-white content-center justify-items-center '><Link to="/#"><FaFigma size={15}/></Link></li> */}
             <li className="mr-3  hover:text-white content-center ">
-              <Link to="/#">
+              <Link to="https://github.com/larriemoses">
                 <FaGithub size={15} />
               </Link>
             </li>
@@ -36,12 +36,12 @@ function Home() {
               </Link>
             </li>
             <li className="mr-3  hover:text-white content-center">
-              <Link to="/#">
+              <Link to="https://medium.com/@larriemoses">
                 <FaMedium size={15} />
               </Link>
             </li>
             <li className="mr-3  hover:text-white content-center ">
-              <Link to="/#">
+              <Link to="mailto:larriemoses@gmail.com">
                 <FaEnvelope size={15} />
               </Link>
             </li>
@@ -49,30 +49,42 @@ function Home() {
         </nav>
 
         <div className="  bg-black w-full text-white h-[100vh] justify-center justify-items-center">
-          <div className="flex w-[80%]">
-            <div className="flex-1">
+          <div className="sm:flex flex-row-reverse w-[80%]">
+            <div className="sm:flex-1  justify-center justify-items-center sm:justify-center sm:justify-items-center items-center  ">
+              <img
+                src={image01}
+                alt=""
+                className="h-50 sm:h-70 flex sm:w-[45%] mb-4 sm:mb-0"
+              />
+            </div>
+            <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center align-items-center">
               <h2 className="text-4xl mb-2  ">Hi, I'm Olarewaju</h2>
-              <h5 className="mb-4 text-sm text-purple-400 font-semibold">
+              <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-sm sm:font-semibold">
                 Frontend Developer | Technical Writer | Content Creator
               </h5>
-              <p className="text-gray-600 leading-loose">
+              <p className="text-gray-600 text-sm sm:text-[1em] text-center sm:text-start leading-loose mb-10 ">
                 I build scalable web apps with
                 <span className="text-white font-semibold"> React.js,</span>
-                <span className="text-white font-semibold">TypeScript, </span>
+                <span className="text-white font-semibold"> TypeScript, </span>
                 and
-                <span className="text-white font-semibold"> Tailwind CSS</span>
+                <span className="text-white font-semibold">
+                  {" "}
+                  Tailwind CSS
+                </span>{" "}
                 while simplifying tech through
                 <span className="text-white font-semibold"> writing </span>
-                and
+                and{" "}
                 <span className="text-white font-semibold">
                   content creation
                 </span>
-                . Passionate about teaching and digital growth, I help brands
-                engage audiences with clear, impactful communication.
+                .
               </p>
-            </div>
-            <div className="flex-1 justify-end justify-items-end items-center flex ">
-              <img src={image01} alt="" className="h-[15em]" />
+              <div className="next_sec">
+                <button className="bg-white text-black p-2 rounded-full w-[10em]">
+                  {" "}
+                  Download CV
+                </button>
+              </div>
             </div>
           </div>
         </div>
