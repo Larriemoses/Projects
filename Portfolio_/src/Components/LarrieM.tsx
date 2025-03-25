@@ -1,10 +1,5 @@
 import React from "react";
-// import { FaFigma } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaMedium } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { Link } from "react-router-dom";
+
 import image01 from "../assets/New Project (1).png";
 
 import experience from "./Experience";
@@ -12,48 +7,10 @@ import experience from "./Experience";
 function Home() {
   return (
     <>
-      <div className="bg-black w-full overflow-hidden">
-        <nav className=" w-full text-white h-[40%]  mb-15 font-sans content-center justify-items-center ">
-          <ul className="invisible md:visible flex flex-row py-4  content-center my-5 justify-center text-center items-center text-purple-400 bg-gray-900 max-w-max h-[70%] px-2 rounded-4xl ">
-            <li className="flex mr-5  hover:text-white justify-center text-center justify-items-center ">
-              <Link className="justify-center ml-2 " to="/">
-                Larrie Moses
-              </Link>
-            </li>
-            <li className="mr-5  hover:text-white">
-              <Link to="/education">Education</Link>
-            </li>
-            <li className="mr-5  hover:text-white">
-              <Link to="/experience">Experience</Link>
-            </li>
-            {/* <li className='mr-2  hover:text-white content-center justify-items-center '><Link to="/#"><FaFigma size={15}/></Link></li> */}
-            <li className="mr-3  hover:text-white content-center ">
-              <Link to="https://github.com/larriemoses">
-                <FaGithub size={15} />
-              </Link>
-            </li>
-            <li className="mr-3  hover:text-white content-center text-center ">
-              <Link to="https://www.linkedin.com/in/olarewaju-adebulu-320184212/">
-                1
-                <FaLinkedin size={15} />
-              </Link>
-            </li>
-            <li className="mr-3  hover:text-white content-center">
-              <Link to="https://medium.com/@larriemoses">
-                <FaMedium size={15} />
-              </Link>
-            </li>
-            <li className="mr-3  hover:text-white content-center ">
-              <Link to="mailto:larriemoses@gmail.com">
-                <FaEnvelope size={15} />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
+      <div className="bg-black w-full overflow-hidden pt-10">
         <div className="  bg-black w-full text-white h-[100vh] justify-center justify-items-center">
           <div className="sm:flex flex-row-reverse w-[80%] sm:w-[85%]">
-            <div className="sm:flex-1  justify-center justify-items-center sm:justify-end sm:justify-items-center items-center  ">
+            <div className="sm:flex-1  justify-center justify-items-center sm:justify-end sm:justify-items-end items-end  ">
               <img
                 src={image01}
                 alt=""
@@ -75,8 +32,8 @@ function Home() {
                 and
                 <span className="text-gray-400 font-semibold">
                   {" "}
-                  Tailwind CSS
-                </span>{" "}
+                  Tailwind CSS{" "}
+                </span>
                 while simplifying tech through
                 <span className="text-gray-400 font-semibold"> Writing </span>
                 and{" "}
@@ -88,7 +45,6 @@ function Home() {
               <div className="next_sec flex-wrap sm:flex justify-items-center">
                 <a href="#" className="">
                   <button className="  bg-white text-black p-2 rounded-full w-[10em] mr-1 sm:mr-15 hover:bg-gray-300 cursor-pointer">
-                    {" "}
                     Download CV
                   </button>
                 </a>

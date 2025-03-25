@@ -4,6 +4,7 @@ import Home from "./Components/LarrieM";
 // import About from './Components/'
 import Education from "./Components/Education";
 import Experience from "./Components/Experience";
+import Nav from "./Components/Nav";
 
 // import './App.css'
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Router>
+        <Nav />
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/education" Component={Education} />
