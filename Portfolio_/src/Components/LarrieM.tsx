@@ -1,20 +1,19 @@
 import React from "react";
 
 import image01 from "../assets/New Project (1).png";
-
-import experience from "./Experience";
+import Nav2 from "./Nav_2";
 
 function Home() {
   return (
     <>
-      <div className="bg-black w-full overflow-hidden pt-10">
-        <div className="  bg-black w-full text-white h-[100vh] justify-center justify-items-center">
-          <div className="sm:flex flex-row-reverse w-[80%] sm:w-[85%]">
+      <div className="bg-black w-full overflow-hidden pt-10 sm:pt-15">
+        <div className="  bg-black w-full text-white min-h-[80vh] justify-center justify-items-center">
+          <div className="sm:flex flex-row-reverse w-[80%] sm:w-[85%] mb-10 sm:mb-0">
             <div className="sm:flex-1  justify-center justify-items-center sm:justify-end sm:justify-items-end items-end  ">
               <img
                 src={image01}
                 alt=""
-                className="h-50 sm:h-60 flex mb-4 sm:mb-0"
+                className="h-50 sm:h-80 flex mb-4 sm:mb-0"
               />
             </div>
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
@@ -48,16 +47,21 @@ function Home() {
                     Download CV
                   </button>
                 </a>
-                <div
-                  className="mt-4 sm:mt-0 flex sm:flex-1 items-center text-purple-400 font-semibold hover:text-purple-300 "
-                  onClick={experience}
+                <a
+                  href="/experience"
+                  className="justify-self-center justify-center items-center flex"
                 >
-                  See Experience
-                </div>
+                  {" "}
+                  <div className="mt-8 sm:mt-0 flex sm:flex-1 text-purple-400 font-semibold hover:text-purple-300 justify-self-center justify-center items-center ">
+                    See Experience
+                  </div>
+                </a>
               </div>
             </div>
           </div>
+          <Nav2 />
         </div>
+        <div></div>
       </div>
     </>
   );

@@ -15,6 +15,7 @@ function App() {
     <>
       <Router>
         <Nav />
+
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/education" Component={Education} />
