@@ -19,7 +19,8 @@ function Home() {
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
               <h2 className="text-4xl mb-2  ">Hi, I'm Olarewaju</h2>
               <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-sm sm:font-semibold">
-                Frontend Developer | Technical Writer | Content Creator
+                Frontend Developer | Technical Writer | AI Prompt Engineer |
+                Content Creator
               </h5>
               <p className="text-gray-600 text-sm sm:text-[1em] text-center sm:text-start leading-loose mb-10 ">
                 I build scalable web apps with
