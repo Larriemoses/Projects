@@ -1,9 +1,41 @@
 import React from "react";
+import { useState } from "react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { auto } from "@cloudinary/url-gen/actions/resize";
+import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
+import { AdvancedImage } from "@cloudinary/react";
+
 
 import image01 from "../assets/New Project (1).png";
 import Nav2 from "./Nav_2";
 
 function Home() {
+  const cld = new Cloudinary({ cloud: { cloudName: "dvl2r3bdw" } });
+
+  // Use this sample image or upload your own via the Media Explorer
+  const img = cld
+    .image("cld-sample-5")
+    .format("auto") // Optimize delivery by resizing and applying auto-format and auto-quality
+    .quality("auto")
+    .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
+
+  const slides = [
+    { title: "Slide 1", description: "This is the description for Slide 1." },
+    { title: "Slide 2", description: "This is the description for Slide 2." },
+    { title: "Slide 3", description: "This is the description for Slide 3." },
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <>
       <div className="bg-black w-full overflow-hidden pt-10 sm:pt-15">
@@ -17,7 +49,7 @@ function Home() {
               />
             </div>
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
-              <h2 className="text-4xl mb-2  ">Hi, I'm Olarewaju</h2>
+              <h2 className="text-5xl mb-3  ">Hi, I'm Olarewaju</h2>
               <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-sm sm:font-semibold">
                 Frontend Developer | Technical Writer | AI Prompt Engineer |
                 Content Creator
@@ -61,8 +93,21 @@ function Home() {
             </div>
           </div>
           <Nav2 />
+          <div className="carousel">
+            <button className="prev" onClick={prevSlide}>
+              Prev
+            </button>
+            <div>
+              <h2>{slides[currentIndex].title}</h2>
+              <p>{slides[currentIndex].description}</p>
+            </div>
+
+            <button className="next" onClick={nextSlide}>
+              Next
+            </button>
+          </div>
+          <AdvancedImage cldImg={img} />
         </div>
-        <div></div>
       </div>
     </>
   );
