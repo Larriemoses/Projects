@@ -107,6 +107,7 @@ function Home() {
             </button>
           </div>
           <AdvancedImage cldImg={img} />
+<div>JavaScript </div>
         </div>
       </div>
     </>
