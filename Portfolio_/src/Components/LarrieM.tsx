@@ -5,7 +5,6 @@ import { auto } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 import { AdvancedImage } from "@cloudinary/react";
 
-
 import image01 from "../assets/New Project (1).png";
 import Nav2 from "./Nav_2";
 
@@ -13,6 +12,12 @@ function Home() {
   const cld = new Cloudinary({ cloud: { cloudName: "dvl2r3bdw" } });
 
   // Use this sample image or upload your own via the Media Explorer
+  const portfolio = cld.image("portfolio/fmp4ckl4tmqcicgit062");
+
+  const portfolio_img = portfolio.toURL();
+
+  // Transform the image: auto-crop to square aspect_ratio
+
   const img = cld
     .image("cld-sample-5")
     .format("auto") // Optimize delivery by resizing and applying auto-format and auto-quality
@@ -20,7 +25,10 @@ function Home() {
     .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
 
   const slides = [
-    { title: "Slide 1", description: "This is the description for Slide 1." },
+    {
+      title: <img className="h-5em flex   " src={portfolio_img} alt="" />,
+      description: "This is the description for Slide 1.",
+    },
     { title: "Slide 2", description: "This is the description for Slide 2." },
     { title: "Slide 3", description: "This is the description for Slide 3." },
   ];
@@ -43,14 +51,14 @@ function Home() {
           <div className="sm:flex flex-row-reverse w-[80%] sm:w-[85%] mb-10 sm:mb-0">
             <div className="sm:flex-1  justify-center justify-items-center sm:justify-end sm:justify-items-end items-end  ">
               <img
-                src={image01}
-                alt=""
-                className="h-50 sm:h-80 flex mb-4 sm:mb-0"
+                src={portfolio_img}
+                alt="portfolio"
+                className="h-50 sm:h-70 flex mb-4 sm:mb-0"
               />
             </div>
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
-              <h2 className="text-5xl mb-3  ">Hi, I'm Olarewaju</h2>
-              <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-sm sm:font-semibold">
+              <h2 className="text-4xl mb-3  ">Hi, I'm Olarewaju</h2>
+              <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-xs sm:font-semibold">
                 Frontend Developer | Technical Writer | AI Prompt Engineer |
                 Content Creator
               </h5>
@@ -97,8 +105,8 @@ function Home() {
             <button className="prev" onClick={prevSlide}>
               Prev
             </button>
-            <div>
-              <h2>{slides[currentIndex].title}</h2>
+            <div className="h-[10em] flex-wrap">
+              <h2 className="h-[5em] flex">{slides[currentIndex].title}</h2>
               <p>{slides[currentIndex].description}</p>
             </div>
 
@@ -106,7 +114,6 @@ function Home() {
               Next
             </button>
           </div>
-          <AdvancedImage cldImg={img} />
         </div>
       </div>
     </>
