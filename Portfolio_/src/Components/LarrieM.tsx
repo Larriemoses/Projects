@@ -5,7 +5,6 @@ import { auto } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 import { AdvancedImage } from "@cloudinary/react";
 
-import image01 from "../assets/New Project (1).png";
 import Nav2 from "./Nav_2";
 
 function Home() {
@@ -17,6 +16,7 @@ function Home() {
   const portfolio_img = portfolio.toURL();
 
   // Transform the image: auto-crop to square aspect_ratio
+  const modelURL = cld.image("93272895-6b87-41f5-b554-a1c3dcd528ee").toURL();
 
   const img = cld
     .image("cld-sample-5")
@@ -115,7 +115,6 @@ function Home() {
               Next
             </button>
           </div>
-          <AdvancedImage cldImg={img} />
         </div>
       </div>
     </>
