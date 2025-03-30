@@ -114,6 +114,7 @@ function Home() {
               Next
             </button>
           </div>
+          <AdvancedImage cldImg={img} />
         </div>
       </div>
     </>
