@@ -31,6 +31,7 @@ function Home() {
     },
     { title: "Slide 2", description: "This is the description for Slide 2." },
     { title: "Slide 3", description: "This is the description for Slide 3." },
+    { title: "Slide 4", description: "This is the description for Slide 4." },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
