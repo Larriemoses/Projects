@@ -9,29 +9,42 @@ import Nav2 from "./Nav_2";
 
 function Home() {
   const cld = new Cloudinary({ cloud: { cloudName: "dvl2r3bdw" } });
-
-  // Use this sample image or upload your own via the Media Explorer
   const portfolio = cld.image("portfolio/fmp4ckl4tmqcicgit062");
 
   const portfolio_img = portfolio.toURL();
 
-  // Transform the image: auto-crop to square aspect_ratio
-  const modelURL = cld.image("93272895-6b87-41f5-b554-a1c3dcd528ee").toURL();
+  // Use this sample image or upload your own via the Media Explorer
+  const javascript = cld.image("portfolio/rtzxevxnlbekziyou9gc");
 
-  const img = cld
-    .image("cld-sample-5")
-    .format("auto") // Optimize delivery by resizing and applying auto-format and auto-quality
-    .quality("auto")
-    .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
+  const javascript_img = javascript.toURL();
+
+  const react = cld.image("portfolio/rmtbimot47p6rmdcgrxa");
+
+  const react_img = react.toURL();
+
+  const figma = cld.image("portfolio/udn4gqxll1piy3hljtqk");
+
+  const figma_img = figma.toURL();
 
   const slides = [
     {
-      title: <img className="h-5em flex   " src={portfolio_img} alt="" />,
-      description: "This is the description for Slide 1.",
+      id: 1,
+      title: <img className="h-5em flex   " src={javascript_img} alt="" />,
+      color: "bg-yellow-200",
+      description: "Javascript",
     },
-    { title: "Slide 2", description: "This is the description for Slide 2." },
-    { title: "Slide 3", description: "This is the description for Slide 3." },
-    { title: "Slide 4", description: "This is the description for Slide 4." },
+    {
+      id: 2,
+      title: <img className="h-5em flex   " src={react_img} alt="" />,
+      color: "bg-blue-200",
+      description: "React.js",
+    },
+    {
+      id: 3,
+      title: <img className="h-5em flex   " src={figma_img} alt="" />,
+      description: "Figma",
+      color: "bg-red-300",
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -102,14 +115,17 @@ function Home() {
             </div>
           </div>
           <Nav2 />
-          <div className="carousel">
-            <button className="prev" onClick={prevSlide}>
-              Prev
-            </button>
-            <div className="h-[10em] flex-wrap">
+          <div>
+            <div
+              className={`${slides[currentIndex].color} text-white p-6 rounded-lg shadow-md h-[10em] flex-wrap`}
+            >
               <h2 className="h-[5em] flex">{slides[currentIndex].title}</h2>
               <p>{slides[currentIndex].description}</p>
             </div>
+
+            <button className="prev" onClick={prevSlide}>
+              Prev
+            </button>
 
             <button className="next" onClick={nextSlide}>
               Next
