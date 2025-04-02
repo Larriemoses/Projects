@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className="w-full h-[60vh] flex items-center justify-center bg-gray-800 relative overflow-hidden">
       {/* Slides container */}
-      <div className="relative flex w-full h-full">
+      <div className="relative flex w-full h-full ">
         {slides.map((slide, index) => {
           // Determine position and visibility for each slide
           const isActive = index === currentIndex;
@@ -63,6 +63,7 @@ function Home() {
       >
         Next
       </button>
+      <div>Section 2</div>
     </div>
   );
 }
