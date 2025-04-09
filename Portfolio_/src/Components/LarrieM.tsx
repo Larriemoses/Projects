@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
 
-
 import Nav2 from "./Nav_2";
+import Slidesec from "./slide";
 
 function Home() {
   const cld = new Cloudinary({ cloud: { cloudName: "dvl2r3bdw" } });
@@ -73,8 +73,8 @@ function Home() {
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
               <h2 className="text-4xl mb-3  ">Hi, I'm Olarewaju</h2>
               <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-xs sm:font-semibold">
-                Frontend Developer | Technical & Content Writer | AI Prompt Engineer |
-                Content Creator
+                Frontend Developer | Technical & Content Writer | AI Prompt
+                Engineer | Content Creator
               </h5>
               <p className="text-gray-600 text-sm sm:text-[1em] text-center sm:text-start leading-loose mb-10 ">
                 I build scalable web apps with
@@ -115,7 +115,7 @@ function Home() {
             </div>
           </div>
           <Nav2 />
-          <div>
+          {/* <div>
             <div
               className={`${slides[currentIndex].color} text-white p-6 rounded-lg shadow-md h-[10em] flex-wrap`}
             >
@@ -130,7 +130,9 @@ function Home() {
             <button className="next" onClick={nextSlide}>
               Next
             </button>
-          </div>
+          </div> */}
+
+          <Slidesec />
         </div>
       </div>
     </>

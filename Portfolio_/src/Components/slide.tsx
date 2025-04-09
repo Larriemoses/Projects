@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Home() {
+function slide() {
   const slides = [
     { id: 1, title: "Javascript", color: "bg-yellow-200" },
     { id: 2, title: "React.js", color: "bg-blue-200" },
@@ -20,9 +20,18 @@ function Home() {
   };
 
   return (
-    <div className="w-full h-[60vh] py-5 px-2 flex items-center justify-center bg-gray-800 relative overflow-hidden">
+    <div className="w-[80%] h-[30vh] md:h-[40vh] py-5 px-2 flex items-center justify-center bg-black relative overflow-hidden">
       {/* Slides container */}
-      <div className="relative flex w-full h-full ">
+
+      {/* Experience and Stack Seciton */}
+      {/* 
+      <div className="flex-1">
+        <div>
+          <h1>XP</h1>
+        </div>
+      </div> */}
+
+      <div className="relative flex-1 w-full h-full ">
         {slides.map((slide, index) => {
           // Determine position and visibility for each slide
           const isActive = index === currentIndex;
@@ -42,7 +51,7 @@ function Home() {
           return (
             <div
               key={slide.id}
-              className={`absolute top-0 left-0 w-[70%] h-full flex items-center justify-center rounded-lg shadow-lg transition-all duration-700 ease-in-out ${slide.color} ${positionClass}`}
+              className={`absolute top-0 left-0 w-[80%] md:w-[70%] h-full flex items-center justify-center rounded-lg shadow-lg transition-all duration-700 ease-in-out ${slide.color} ${positionClass}`}
             >
               <h2 className="text-black font-bold text-4xl">{slide.title}</h2>
             </div>
@@ -68,4 +77,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default slide;
