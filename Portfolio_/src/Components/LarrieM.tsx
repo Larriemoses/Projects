@@ -12,6 +12,8 @@ function Home() {
   const portfolio_img = portfolio.toURL();
 
   // Use this sample image or upload your own via the Media Explorer
+  // Use this sample image or upload your own via the Media Explorer
+
   const javascript = cld.image("portfolio/rtzxevxnlbekziyou9gc");
 
   const javascript_img = javascript.toURL();
@@ -71,7 +73,7 @@ function Home() {
             <div className="sm:flex-1 justify-center justify-items-center sm:justify-items-start sm:justify-start items-center sm:items-center">
               <h2 className="text-4xl mb-3  ">Hi, I'm Olarewaju</h2>
               <h5 className="mb-4 text-xs text-center sm:text-start text-purple-400 font-normal sm:text-xs sm:font-semibold">
-                Frontend Developer | Technical Writer | AI Prompt Engineer |
+                Frontend Developer | Technical & Content Writer | AI Prompt Engineer |
                 Content Creator
               </h5>
               <p className="text-gray-600 text-sm sm:text-[1em] text-center sm:text-start leading-loose mb-10 ">
