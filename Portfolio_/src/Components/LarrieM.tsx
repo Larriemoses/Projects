@@ -115,22 +115,6 @@ function Home() {
             </div>
           </div>
           <Nav2 />
-          {/* <div>
-            <div
-              className={`${slides[currentIndex].color} text-white p-6 rounded-lg shadow-md h-[10em] flex-wrap`}
-            >
-              <h2 className="h-[5em] flex">{slides[currentIndex].title}</h2>
-              <p>{slides[currentIndex].description}</p>
-            </div>
-
-            <button className="prev" onClick={prevSlide}>
-              Prev
-            </button>
-
-            <button className="next" onClick={nextSlide}>
-              Next
-            </button>
-          </div> */}
 
           <Slidesec />
         </div>
