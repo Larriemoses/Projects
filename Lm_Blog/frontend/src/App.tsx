@@ -1,25 +1,28 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './pages/Home';
-import ArticleDetail from './pages/ArticleDetail';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+  import React from 'react';
+  import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+  import Home from './pages/Home';
+  import ArticleDetail from './pages/ArticleDetail';
+  import Navbar from './components/Navbar';
+  import Footer from './components/Footer';
 
-const App: React.FC = () => {
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/article/:id" component={ArticleDetail} />
-          </Switch>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-};
 
-export default App;
+
+
+  const App: React.FC = () => {
+    return (
+      <Router>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-grow">
+            <Routes>          
+              <Route path="/" element={<Home />} />
+              <Route path="/article/:id" element={<ArticleDetail />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    );
+  };
+
+  export default App;

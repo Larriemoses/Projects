@@ -17,7 +17,7 @@ const ArticleDetail: React.FC = () => {
                 const data = await response.json();
                 setArticle(data);
             } catch (err) {
-                setError(err.message);
+                setError((err as Error).message); // Explicitly cast to Error
             } finally {
                 setLoading(false);
             }

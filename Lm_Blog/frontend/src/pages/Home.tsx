@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ArticleCard from '../components/ArticleCard';
 
+interface Article {
+    id: number;
+    title: string;
+    content: string;
+}
+
 const Home: React.FC = () => {
-    const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState<Article[]>([]);
 
     useEffect(() => {
         const fetchArticles = async () => {
