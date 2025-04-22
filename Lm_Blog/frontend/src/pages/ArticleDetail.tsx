@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 const ArticleDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [article, setArticle] = useState<any>(null);
+    const [articles, setArticles] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -25,6 +26,20 @@ const ArticleDetail: React.FC = () => {
 
         fetchArticle();
     }, [id]);
+
+    const fetchArticles = async () => {
+        try {
+            const response = await fetch('http://127.0.0.1:8000/articles/');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            setArticles(data);
+        } catch (err) {
+            console.error('Fetch error:', err);
+            setError((err as Error).message);
+        }
+    };
 
     if (loading) {
         return <div>Loading...</div>;
