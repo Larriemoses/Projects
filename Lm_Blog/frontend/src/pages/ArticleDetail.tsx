@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+uimport React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const ArticleDetail: React.FC = () => {
@@ -57,6 +57,8 @@ const ArticleDetail: React.FC = () => {
                 <p>{article.content}</p>
             </div>
         </div>
+
+<div></div>
     );
 };
 
