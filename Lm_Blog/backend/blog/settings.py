@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'articles',  # Your articles app
     'blog',
     'corsheaders',  # For CORS
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

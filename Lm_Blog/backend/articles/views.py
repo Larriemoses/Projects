@@ -1,5 +1,10 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
+from django.http import JsonResponse
+from django.views import View
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+import json
 from .models import Article
 from .serializers import ArticleSerializer
 
@@ -34,3 +39,16 @@ class ArticleViewSet(viewsets.ModelViewSet):
         article = self.get_object()
         article.delete()
         return Response(status=204)
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ArticleCreateView(View):
+    def post(self, request):
+        try:
+            data = json.loads(request.body)
+            article = Article.objects.create(
+                title=data['title'],
+                content=data['content']
+            )
+            return JsonResponse({'id': article.id, 'title': article.title, 'content': article.content}, status=201)
+        except KeyError:
+            return JsonResponse({'error': 'Invalid data'}, status=400)

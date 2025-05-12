@@ -95,9 +95,6 @@ function slide() {
       </div>
       {/* Navigation Buttons */}
 
-<div>
-All is needed
-</div>
     </div>
   );
 }
