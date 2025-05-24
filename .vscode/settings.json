@@ -1,4 +1,18 @@
 {
   "git.ignoreLimitWarning": true,
   "cSpell.words": ["blacktext", "coeff", "coeffs", "subproblems"]
+
+  
 }
+
+
+
+{
+  "python.analysis.extraPaths": [
+    "./backend",
+    "./venv/lib/python3.11/site-packages"  # Adjust Python version
+  ],
+  "python.languageServer": "Pylance",
+  "python.linting.pylintEnabled": false,
+}
+
