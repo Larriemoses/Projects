@@ -2,9 +2,14 @@
 
 This project is a blog application built using React, TypeScript, and Tailwind CSS for the frontend, and Django for the backend. The application allows users to create, read, update, and delete articles, providing a platform for sharing knowledge and educating others about technology.
 
+
+-----
+
 ## Project Structure
 
 The project is divided into two main parts: the backend and the frontend.
+
+
 
 ### Backend
 
